@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/asset.dart';
 
-
 class CustomeAppBar extends StatelessWidget {
   const CustomeAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
+      padding: const EdgeInsets.only(left: 20, right: 10, bottom: 20),
       child: Row(
         children: [
           Image.asset(
