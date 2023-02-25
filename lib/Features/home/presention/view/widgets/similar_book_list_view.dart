@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'custom_book_image.dart';
 
-class FeaturedBookListView extends StatelessWidget {
-  const FeaturedBookListView({super.key});
+class SimilarBookListView extends StatelessWidget {
+  const SimilarBookListView({super.key});
 
   @override
   Widget build(BuildContext context) {

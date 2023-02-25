@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'book_name_details.dart';
 import 'custom_book_details_app_bar.dart';
 import 'custom_book_image.dart';
-import 'featured_book_list_view.dart';
+import 'similar_book_list_view.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
@@ -30,7 +30,7 @@ class BookDetailsViewBody extends StatelessWidget {
           height: MediaQuery.of(context).size.height / 30,
         ),
         const Text(
-          'Best Seller',
+          'You can also like',
           style: Styles.tetxStyle18,
           textAlign: TextAlign.left,
         ),
@@ -39,9 +39,10 @@ class BookDetailsViewBody extends StatelessWidget {
         ),
         SizedBox(
             height: MediaQuery.of(context).size.height / 5.5,
-            child: const FeaturedBookListView())
+            child: const SimilarBookListView())
       ]),
     );
   }
 }
+
 
