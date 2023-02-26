@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/asset.dart';
 
@@ -15,7 +16,9 @@ class CustomeAppBar extends StatelessWidget {
         ),
         const Spacer(),
         IconButton(
-            onPressed: () {},
+            onPressed: () {
+              GoRouter.of(context).push('/searchView');
+            },
             icon: const Icon(
               Icons.search_rounded,
               size: 26,
