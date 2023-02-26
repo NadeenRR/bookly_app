@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class CustomSearchTextField extends StatelessWidget {
   const CustomSearchTextField({super.key});
 
