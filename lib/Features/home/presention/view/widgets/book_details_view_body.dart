@@ -1,3 +1,4 @@
+import 'package:bookly_app/Features/home/data/models/book_models/book_models.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'book_name_details.dart';
@@ -6,8 +7,9 @@ import 'custom_book_image.dart';
 import 'similar_book_list_view.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
-  const BookDetailsViewBody({super.key});
+  const BookDetailsViewBody({super.key, required this.book});
 
+  final BookModels book;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,14 +22,15 @@ class BookDetailsViewBody extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(
               horizontal: MediaQuery.of(context).size.width / 4),
-          child: const CustomBookImage(
-            imageUrl: 'https://unsplash.com/photos/ixgVMZ1uUaI',
-          ),
+          child: CustomBookImage(
+              imageUrl: book.volumeInfo.imageLinks?.thumbnail ?? ' '),
         ),
         SizedBox(
           height: MediaQuery.of(context).size.height / 40,
         ),
-        const BookNameDetails(),
+        BookNameDetails(
+          book: book,
+        ),
         SizedBox(
           height: MediaQuery.of(context).size.height / 30,
         ),
