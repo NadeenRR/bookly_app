@@ -14,8 +14,10 @@ class CustomeError extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text(
+        
         errMessage,
         style: Styles.tetxStyle18,
+        textAlign: TextAlign.center,
       ),
     );
   }

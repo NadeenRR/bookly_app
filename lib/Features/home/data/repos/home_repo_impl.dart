@@ -47,4 +47,23 @@ class HomeRepoImelement implements HomeRepo {
       return left(ServerFailure(e.toString()));
     }
   }
+  
+  @override
+  Future<Either<Failure, List<BookModels>>> fetchSimilerBooks({required String category}) async{
+     try {
+      var data = await apiServes.get(
+          endPoint: 'volumes?Filtering=free-ebooks&Sorting=relevance &q=computer science');
+      List<BookModels> books = [];
+      for (var item in data['items']) {
+        books.add(BookModels.fromJson(item));
+      }
+      return right(books);
+    } on Exception catch (e) {
+      if (e is DioError) {
+        return Left(ServerFailure.fromDioError(e));
+      }
+
+      return left(ServerFailure(e.toString()));
+    }
+  }
 }
