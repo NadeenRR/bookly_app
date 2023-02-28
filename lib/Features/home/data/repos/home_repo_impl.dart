@@ -14,7 +14,7 @@ class HomeRepoImelement implements HomeRepo {
     try {
       var data = await apiServes.get(
           endPoint:
-              'volumes?Filtering=free-ebooks&Sorting=newest &q=computer science');
+              'volumes?Filtering=free-ebooks&Sorting=newest &q=Programming ');
       List<BookModels> books = [];
       for (var item in data['items']) {
         books.add(BookModels.fromJson(item));

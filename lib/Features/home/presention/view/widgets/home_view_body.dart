@@ -12,6 +12,7 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
+      physics: const BouncingScrollPhysics(),
       slivers: [
         SliverToBoxAdapter(
           child: SafeArea(
@@ -28,7 +29,7 @@ class HomeViewBody extends StatelessWidget {
                     'Best Seller',
                     style: Styles.tetxStyle18,
                   ),
-                  SizedBox(height: MediaQuery.of(context).size.height / 30),
+                  SizedBox(height: MediaQuery.of(context).size.height / 75),
                 ],
               ),
             ),
